@@ -8,13 +8,11 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './places.page.html',
   styleUrls: ['./places.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
 })
 export class PlacesPage implements OnInit {
+  places: string[] = ['Brunei', 'Tutong', 'Belait', 'Temburong'];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
