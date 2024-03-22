@@ -11,11 +11,16 @@ export const routes: Routes = [
     path: 'auth',
     loadComponent: () => import('./auth/auth.page').then((m) => m.AuthPage),
   },
+  // {
+  //   path: 'places',
+  //   loadComponent: () =>
+  //     import('./places/places.page').then((m) => m.PlacesPage),
+  // },
 
   {
     path: 'offers',
     loadComponent: () =>
-      import('./places/offers/offers.page').then((m) => m.OffersPage),
+      import('./offers/offers.page').then((m) => m.OffersPage),
   },
   {
     path: 'tabs',
@@ -24,12 +29,12 @@ export const routes: Routes = [
       {
         path: 'places',
         loadComponent: () =>
-          import('./places/services.page').then((m) => m.PlacesPage),
+          import('./places/places.page').then((m) => m.PlacesPage),
       },
       {
         path: 'offers',
         loadComponent: () =>
-          import('./places/offers/offers.page').then((m) => m.OffersPage),
+          import('./offers/offers.page').then((m) => m.OffersPage),
       },
     ],
   },
@@ -41,9 +46,5 @@ export const routes: Routes = [
   {
     path: 'tabs',
     loadComponent: () => import('./tabs/tabs.page').then((m) => m.TabsPage),
-  },
-  {
-    path: 'discover',
-    loadComponent: () => import('./places/discover/discover.page').then( m => m.DiscoverPage)
   },
 ];
