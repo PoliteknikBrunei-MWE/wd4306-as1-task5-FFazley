@@ -15,7 +15,7 @@ export const routes: Routes = [
   {
     path: 'offers',
     loadComponent: () =>
-      import('./offers/offers.page').then((m) => m.OffersPage),
+      import('./places/offers/offers.page').then((m) => m.OffersPage),
   },
   {
     path: 'tabs',
@@ -29,7 +29,7 @@ export const routes: Routes = [
       {
         path: 'offers',
         loadComponent: () =>
-          import('./offers/offers.page').then((m) => m.OffersPage),
+          import('./places/offers/offers.page').then((m) => m.OffersPage),
       },
     ],
   },
@@ -44,6 +44,6 @@ export const routes: Routes = [
   },
   {
     path: 'discover',
-    loadComponent: () => import('./discover/discover.page').then( m => m.DiscoverPage)
+    loadComponent: () => import('./places/discover/discover.page').then( m => m.DiscoverPage)
   },
 ];
