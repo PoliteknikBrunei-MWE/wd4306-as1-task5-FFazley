@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { PlacesService } from '../places.service';
-import { Place } from '../place.model';
-
+import { Place } from './place.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PlacesService implements OnInit {
+export class PlacesService {
   loadedPlaces! : Place[];
 
   private places:Place[] = [
@@ -15,16 +13,13 @@ export class PlacesService implements OnInit {
     new Place('p3', 'Belait', 'The Oil Town', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/1200px-Flag_of_Brunei.svg.png', 99.99),
   ];
 
-  constructor(private placesService: PlacesService) { }
+  constructor() { }
 
   get $places() {
     return [...this.places];
   }
-  ngOnInit() {
-    this.loadedPlaces = this.placesService.$places;
+
+  loadPlaces() {
+    this.loadedPlaces = this.$places;
   }
-
 }
-
-
-
